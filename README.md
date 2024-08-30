@@ -1,9 +1,12 @@
 # vue-project
+
 技术栈：
 vue3+vite: https://cn.vuejs.org/guide/essentials/class-and-style.html
 
 样式使用：
 tailwindcss: https://www.tailwindcss.cn/docs/installation
+
+npm i vite-plugin-imagemin --ignore-scripts
 
 ## Recommended IDE Setup
 
