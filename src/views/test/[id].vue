@@ -8,6 +8,7 @@ const props = defineProps({
     type: Number
   }
 })
+console.log(`output->props`, props)
 </script>
 
 <style></style>

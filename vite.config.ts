@@ -5,7 +5,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 // 代码统一使用tailwindcss的类进行class编写
 import tailwindcss from 'tailwindcss'
 // 打包分析插件
-import { visualizer } from 'rollup-plugin-visualizer' 
+import { visualizer } from 'rollup-plugin-visualizer'
 // 图片压缩优化
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 // 约定式路由插件
@@ -29,7 +29,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    ViteImageOptimizer(),  
+    ViteImageOptimizer(),
     Pages({
       dirs: 'src/views', //需要生成路由的文件目录，默认文件夹为pages
       // exclude: ['**/components/*.vue'], //排除components目录下的.vue文件
@@ -48,21 +48,19 @@ export default defineConfig({
       // defaultLayout: 'index' // 指定默认布局文件的名称
     }),
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver()]
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver()]
     }),
-    compression(
-      {
-        filter: /\.(js|css|json|txt|ico|svg)(\?.*)?$/i, 
-        ext: '.gz',
-        algorithm: 'gzip', // 压缩算法
-        threshold: 1024 * 4,
-        deleteOriginFile: false,
-        verbose: true // 是否输出到控制台
-      }
-    ),
+    compression({
+      filter: /\.(js|css|json|txt|ico|svg)(\?.*)?$/i,
+      ext: '.gz',
+      algorithm: 'gzip', // 压缩算法
+      threshold: 1024 * 4,
+      deleteOriginFile: false,
+      verbose: true // 是否输出到控制台
+    }),
     visualizer({
       // open: true
     })

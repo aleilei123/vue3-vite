@@ -4,7 +4,7 @@
   <div>
     <div class="navbar">导航栏index</div>
     <div class="sidebar">侧边栏index</div>
-    
+
     <div>
       <router-link to="/">Home</router-link>
       |

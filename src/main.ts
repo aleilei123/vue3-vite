@@ -1,13 +1,12 @@
 import './style/tailwind.css'
 
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
+import stores from './stores'
 import App from './App.vue'
 
 // import router from './router'
 import { createRouter, createWebHistory } from 'vue-router'
-//自动读取src/view文件目录作为路由
+// 自动读取src/view文件目录作为路由
 import { setupLayouts } from 'virtual:generated-layouts'
 import generatedRoutes from 'virtual:generated-pages'
 console.log('setupLayouts-->', setupLayouts)
@@ -26,7 +25,7 @@ const router = createRouter({
 })
 const app = createApp(App)
 
-app.use(createPinia())
+app.use(stores)
 app.use(router)
 
 app.mount('#app')

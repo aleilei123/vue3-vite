@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-  console.log(`output->`,name)
+console.log(`output->`, name)
 </script>
 
 <style></style>
